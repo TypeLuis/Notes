@@ -25,7 +25,14 @@ Next step is to **activate** the virtual enviorment. There's different ways to a
 If project is being used in a git repository, add the virtual enviorment folder to **.gitignore**.
 
 
-Once virutal enviorment is activated, start by installing **Flask** module with `pip install flask` *"pip" will be different depending on version*
+Once virutal enviorment is activated, start by installing **Flask** module with `pip install flask flask-cors` *"pip" will be different depending on version*
+
+<details>
+<summary><h3>What is cors?</h3></summary>
+
+cors is short for **Cross-Origin Resource**, it's a protocol that allows servers to recieve requests from different domains. Without cors, if a website doesn't have the same domain name as the api routes, the api will be blocked due to cors policy.
+
+</details>
 
 After Flask is installed, create a file for the application *(application.py)*. In the file, paste the following flask template below.
 
