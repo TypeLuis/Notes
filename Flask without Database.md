@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
 First once you created your virtual enviorment and application, import dotenv module `pip3 install python-dotenv`
 
-## after the module is installed, create a **.env** file and add the file in the .gitignore file (important)
+### after the module is installed, create a **.env** file and add the file in the .gitignore file (important)
 
 
 </details>
