@@ -17,3 +17,9 @@ Next step is to **activate** the virtual enviorment. There's different ways to a
 
 ### *To Deactivate*  `deactivate`
 
+
+If project is being used in a git repository, add the virtual enviorment folder to **.gitignore**.
+---
+
+
+
