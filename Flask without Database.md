@@ -19,7 +19,9 @@ Next step is to **activate** the virtual enviorment. There's different ways to a
 
 
 If project is being used in a git repository, add the virtual enviorment folder to **.gitignore**.
----
 
+
+
+## Once virutal enviorment is activated, start by installing **Flask** module with `pip install flask` *"pip" will be different depending on version*
 
 
