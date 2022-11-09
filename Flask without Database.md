@@ -94,6 +94,7 @@ Blueprints in Flask allows us to seperate the api routes into different files ot
 
 First create a new file, call it what you need but for now we'll call it **example.py** and paste the following code
 
+## example.py
 ```
 from flask import Blueprint
 
@@ -109,17 +110,26 @@ def example():
 
 ```
 
-On the imports of your application.py
+On the imports of your application.py add another import `from example import example_blueprint`. **example_blueprint** is the variable we called for the blueprint route in example.py
 
-Your application.py currently should look something like this template
+The final step is to register the blueprint to the app route below the app variable `app.register_blueprint(example_blueprint)`
 
+Your application.py currently should look something like this
+
+## application.py
 ```
 import os
 from flask import Flask
 from flask_cors import CORS
 
+# imports from blueprint
+from example import example_blueprint
+
 app = Flask(__name__)
 CORS(app)
+
+# connects blueprint to the app routes
+app.register_blueprint(example_blueprint)
 
 # This is how a route works
 @app.route('/', methods=['GET'])
@@ -130,7 +140,6 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
 ```
-
-after `CORS(app)`
+After the final step, your example_blueprint route should work as normal.
 
 </details>
