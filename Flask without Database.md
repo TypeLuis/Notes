@@ -62,5 +62,26 @@ First once you created your virtual enviorment and application, import dotenv mo
 
 ### after the module is installed, create a **.env** file and add the file in the .gitignore file (important)
 
+inside .env, this is where we put lines of code we want to use but don't want anybody to see **(ex: api keys)**. paste the following for example.
+
+```
+ENV_EXAMPLE=This is an example
+another_Example=https://www.google.com
+```
+
+before the equal sign is the name of the env variable **(case sensitive)** after the equal is the value.
+
+in your application file, paste the following
+
+```
+import os
+from dotenv import load_dotenv
+
+# loads the env variables in application 
+load_dotenv()
+
+print(os.environ.get("ENV_EXAMPLE")) # This is an example
+print(os.environ.get("another_Example")) # https://www.google.com
+```
 
 </details>
