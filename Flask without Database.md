@@ -1,5 +1,5 @@
 <details>
-<summary>Creating a flask application</summary>
+<summary><h2>Creating a flask application</h2></summary>
 
 
 First we will need to create a **virtual-enviornment** for our python file. The virtual-enviorment creates a contained location where the modules we install with **pip** are stored, set to the project only. 
@@ -52,10 +52,13 @@ if __name__ == '__main__':
 
 </details>
 
-<details>
-<summary>Adding .env (optional)</summary>
 
-.env allows you to hide certain lines of code to not be pushed to a repository
+<details>
+<summary><h2>Adding .env (optional)</h2></summary>
+
+.env allows you to hide certain lines of code to not be pushed to a repository this imporoves secruity to the code.
+
+First once you created your virtual enviorment and application, import dotenv module `pip3 install python-dotenv`
 
 
 </details>
