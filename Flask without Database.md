@@ -15,5 +15,4 @@ Next step is to **activate** the virtual enviorment. There's different ways to a
 
 **PowerShell:**   `$ <venv>/bin/Activate.ps1`
 
-
 *To Deactivate*  `deactivate`
