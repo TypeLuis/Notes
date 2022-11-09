@@ -6,13 +6,14 @@ Next step is to **activate** the virtual enviorment. There's different ways to a
 
 ## Windows:
 
-**cmd.exe:** `<venv>\Scripts\activate.bat`
+### **cmd.exe:** `<venv>\Scripts\activate.bat`
 
-**PowerShell:**   `<venv>\Scripts\Activate.ps1`
+### **PowerShell:**   `<venv>\Scripts\Activate.ps1`
 
 ## POSIX:
-**bash/zsh:**   `$ source <venv>/bin/activate`
+### **bash/zsh:**   `$ source <venv>/bin/activate`
 
-**PowerShell:**   `$ <venv>/bin/Activate.ps1`
+### **PowerShell:**   `$ <venv>/bin/Activate.ps1`
 
-*To Deactivate*  `deactivate`
+### *To Deactivate*  `deactivate`
+
