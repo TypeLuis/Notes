@@ -85,3 +85,9 @@ print(os.environ.get("another_Example")) # https://www.google.com
 ```
 
 </details>
+
+
+<details>
+<summary><h2>Adding Blueprints to Flask</h2></summary>
+
+</details>
