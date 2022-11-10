@@ -106,7 +106,7 @@ First create a new file, call it what you need but for now we'll call it **bluep
 from flask import Blueprint
 
 
-example_blueprint = Blueprint("blueprint_example", __name__)  # inside of "example" string should be the name of the file
+example_blueprint = Blueprint("blueprint_example", __name__)  # inside of "blueprint_example" string should be the name of the file
 
 
 # It's recomended to add /example to every route as the main path of the blueprint routes to seperate the routes by path
