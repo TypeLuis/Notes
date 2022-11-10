@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
 
 <details>
-<summary><h2>Adding .env (optional)</h2></summary>
+<summary><h2>Adding .env</h2></summary>
 
 .env allows you to hide certain lines of code to not be pushed to a repository this imporoves secruity to the code.
 
