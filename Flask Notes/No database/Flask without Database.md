@@ -99,14 +99,14 @@ print(os.environ.get("another_Example")) # https://www.google.com
 
 Blueprints in Flask allows us to seperate the api routes into different files otherwise called **Seperation of concern**.
 
-First create a new file, call it what you need but for now we'll call it **example.py** and paste the following code
+First create a new file, call it what you need but for now we'll call it **blueprint_example.py** and paste the following code
 
-## example.py
+## blueprint_example.py
 ```
 from flask import Blueprint
 
 
-example_blueprint = Blueprint("example", __name__)  # inside of "example" string should be the name of the file
+example_blueprint = Blueprint("blueprint_example", __name__)  # inside of "example" string should be the name of the file
 
 
 # It's recomended to add /example to every route as the main path of the blueprint routes to seperate the routes by path
@@ -117,7 +117,7 @@ def example():
 
 ```
 
-On the imports of your application.py add another import `from example import example_blueprint`. **example_blueprint** is the variable we called for the blueprint route in example.py
+On the imports of your application.py add another import `from example import example_blueprint`. **example_blueprint** is the variable we called for the blueprint route in blueprint_example.py
 
 The final step is to register the blueprint to the app route below the app variable `app.register_blueprint(example_blueprint)`
 
@@ -130,7 +130,7 @@ from flask import Flask
 from flask_cors import CORS
 
 # imports from blueprint
-from example import example_blueprint
+from blueprint_example import example_blueprint
 
 app = Flask(__name__)
 CORS(app)

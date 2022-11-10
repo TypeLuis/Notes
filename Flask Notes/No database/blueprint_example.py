@@ -1,7 +1,7 @@
 from flask import Blueprint
 
 
-# inside of "example" string should be the name of the file
+# inside of "blueprint_example" string should be the name of the file
 example_blueprint = Blueprint("example", __name__)
 
 
