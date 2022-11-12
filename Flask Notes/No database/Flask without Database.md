@@ -150,3 +150,22 @@ if __name__ == '__main__':
 After the final step, your example_blueprint route should work as normal.
 
 </details>
+
+
+<details>
+<summary><h2>Setting up basic authorization for api</h2></summary>
+
+To make sure not just anybody can use the api endpoints, we can Authentication a user based on if they're Authorized to use the api endpoint
+
+<details>
+<summary><h3>The Difference Between Authentication and Authorization</h3></summary>
+[Link that talks about the subject](https://www.onelogin.com/learn/authentication-vs-authorization#:~:text=Authentication%20and%20authorization%20are%20two,authorization%20determines%20their%20access%20rights.)
+
+Authentication and Authorization may sound alike, but each plays a different role in securing systems and data. Unfortunately, people often use both terms interchangeably as they both refer to system access. However, they are distinct processes. Simply put, one verifies the identity of a user or service before granting them access, while the other determines what they can do once they have access.
+
+The best way to illustrate the differences between the two terms is with a simple example. Let's say you decide to go and visit a friend's home. On arrival, you knock on the door, and your friend opens it. She recognizes you (authentication) and greets you. As your friend has authenticated you, she is now comfortable letting you into her home. However, based on your relationship, there are certain things you can do and others you cannot (authorization). For example, you may enter the kitchen area, but you cannot go into her private office. In other words, you have the authorization to enter the kitchen, but access to her private office is prohibited.
+
+</details>
+
+
+</details>
