@@ -198,4 +198,44 @@ The function decorated with the **verify_password** decorator receives the usern
 
 Once the code is placed in **auth.py**, the file can then be imported as a module from other files. In **application.py**, import the auth variable from the **auth.py** file by the following code `from auth import auth`. After auth has been imported, on any routes that require **authorization** below `app.route('/')` routes is where you add the code `@auth.login_required`. Now the API endpoint can't be accessed unless if they have an authorized user and password.
 
+<details>
+
+<summary><h3>How application.py should look after adding auth</h3></summary>
+
+```
+import os
+from flask import Flask
+from flask_cors import CORS
+
+from blueprint_example import example_blueprint  # imports from blueprint
+from auth import auth
+
+from flask_httpauth import HTTPBasicAuth
+
+
+app = Flask(__name__)
+CORS(app)
+
+# connects blueprint to the app routes
+app.register_blueprint(example_blueprint)
+
+
+# This is how a route works
+@app.route('/', methods=['GET'])
+@auth.login_required
+def root():
+    user = auth.current_user()
+    print(user)
+    return {"message": 'ok bro'}
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
+```
+
+</details>
+
+
 </details>
