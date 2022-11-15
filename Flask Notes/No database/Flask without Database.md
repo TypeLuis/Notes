@@ -196,4 +196,6 @@ def verify_password(username, password):
 
 The function decorated with the **verify_password** decorator receives the username and password sent by the client. If the credentials belong to a user, then the function should return the user object. If the credentials are invalid the function can return None or False. The user object can then be queried from the current_user() method of the authentication instance.
 
+Once the code is placed in **auth.py**, the file can then be imported as a module from other files. In **application.py**, import the auth variable from the **auth.py** file by the following code `from auth import auth`. After auth has been imported, on any routes that require **authorization** below `app.route('/')` routes is where you add the code `@auth.login_required`.
+
 </details>
