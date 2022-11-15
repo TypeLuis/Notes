@@ -168,5 +168,32 @@ The best way to illustrate the differences between the two terms is with a simpl
 
 </details>
 
+In order to authorize an endpoint, we can use a module called **flask_httpauth**. To use it, install `pip -m install flask_httpauth` in your virtual enviornment.
+
+After flask_httpauth is installed, create a new file call **auth.py**. Inside, copy the following code.
+
+[More info about flask_httpauth](https://flask-httpauth.readthedocs.io/en/latest/)
+
+```
+from flask_httpauth import HTTPBasicAuth
+
+auth = HTTPBasicAuth()
+
+users = {
+    "john": "hello",  # key value pair is username and password
+    "susan": "bye"
+}
+
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and \
+            users[username] == password:
+        return username
+
+
+```
+
+The function decorated with the **verify_password** decorator receives the username and password sent by the client. If the credentials belong to a user, then the function should return the user object. If the credentials are invalid the function can return None or False. The user object can then be queried from the current_user() method of the authentication instance.
 
 </details>
