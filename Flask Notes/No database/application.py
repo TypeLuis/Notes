@@ -10,23 +10,9 @@ from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
 CORS(app)
-# auth = HTTPBasicAuth()
 
 # connects blueprint to the app routes
 app.register_blueprint(example_blueprint)
-
-# users = {
-#     "john": "hello",  # key value pair is username and password
-#     "susan": "bye"
-# }
-
-
-# @auth.verify_password
-# def verify_password(username, password):
-#     if username in users and \
-#             users[username] == password:
-#         # check_password_hash(users.get(username), password):
-#         return username
 
 
 # This is how a route works
